@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: 'Poppins-regular';
-    src: url('/age-calculator/assets/fonts/Poppins-Regular.ttf');
+    src: url('/fonts/Poppins-Regular.ttf');
   }
 
 @font-face {
     font-family: 'Poppins-ExtraBold';
-    src: url('/age-calculator/assets/fonts/Poppins-ExtraBold.ttf');
+    src: url('/fonts/Poppins-ExtraBold.ttf');
 }
 
 body{
