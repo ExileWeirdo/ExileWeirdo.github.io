@@ -37,8 +37,14 @@ function calculateAge() {
     const ageMonthsSpan = document.getElementById("ageMonths");
     const ageDaysSpan = document.getElementById("ageDays");
     
-  
-    if (document.getElementById("showYears").checked && document.getElementById("showDays").checked){
+    if (document.getElementById("showYears").checked && document.getElementById("showMonths").checked && document.getElementById("showDays").checked){
+        
+        count = 1;
+        ageYearsSpan.textContent = "--";
+        ageMonthsSpan.textContent = "--";
+        ageDaysSpan.textContent = "--";
+    }
+    else if (document.getElementById("showYears").checked && document.getElementById("showDays").checked){
         
         count = 5
         ageYearsSpan.textContent = "--";
@@ -73,13 +79,7 @@ function calculateAge() {
         ageMonthsSpan.textContent = "--";
         ageDaysSpan.textContent = "--";
     }
-    else if (document.getElementById("showYears").checked && document.getElementById("showMonths").checked && document.getElementById("showDays").checked){
-        
-        count = 1;
-        ageYearsSpan.textContent = "--";
-        ageMonthsSpan.textContent = "--";
-        ageDaysSpan.textContent = "--";
-    }
+
     else if(document.getElementById("showDays").checked){
         count = 2;
         ageYearsSpan.textContent = "--";
