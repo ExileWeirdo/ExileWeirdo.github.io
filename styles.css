@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('/age-calculator/assets/fonts/Poppins-Regular.ttf');
+  }
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('/age-calculator/assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    background: hsl(0, 0%, 94%);
+}
+
+.yearsText, .monthsText, .daysText{
+    display: flex;
+}
+
+.wrapperDates{
+    position: relative;
+    background: #fff;
+    width: 50%;
+    padding: 2em;
+    border-radius: 25px 25px 150px 25px;
+    margin: 5%;
+}
+
+.inputs{
+    display:flex;
+    gap: 2rem;
+}
+
+.outcome{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(1.6rem, 0.72rem + 4.4vw, 6rem);
+    font-weight: 800;
+    padding: 0.2em 0.2em;
+    font-family: 'Poppins-ExtraBold';
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.yearsCombined, .monthsCombined, .daysCombined{
+    display:flex;
+}
+
+.leftInput, .middleInput, .rightInput {
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.leftInput input, .middleInput input, .rightInput input{
+    width: 100%;
+    max-width: 8rem;
+    height: 100%;
+    padding: 1rem;
+    font-size: clamp(0.4rem, 0.28rem + 0.6vw, 1rem);
+    margin-top: 0.2rem;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.leftInput input:hover, .middleInput input:hover, .rightInput input:hover{
+    border: 1px  solid hsl(259, 100%, 65%);
+}
+
+.leftInput input:focus, .middleInput input:focus, .rightInput input:focus{
+    border: 2px solid hsl(259, 100%, 65%);
+}
+
+.inputs label{
+    text-transform: uppercase;
+    color: gray;
+    font-size: clamp(0.6rem, 0.52rem + 0.4vw, 1rem);
+    letter-spacing: 2px;
+    font-family: 'Poppins-regular';
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+svg{
+    border-radius: 50px;
+    padding: 1.2em;
+    border: block;
+}
+
+.wrapperArrow{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.wrapperArrow::before{
+    content: " ";
+    height: 1px;
+    flex: 1;
+    background: hsl(0, 0%, 86%);
+
+}
+
+.arrowButton{
+    background: hsl(259, 100%, 65%);
+    position: relative;
+    border: none;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+
+}
+
+.arrowButton:hover{
+    background: hsl(259, 100%, 75%);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    .arrowButton, svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    .leftInput input, .middleInput input, .rightInput input{
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .wrapperDates{
+        margin: 0;
+        padding: 1em;
+        width: 80%;
+    }
+
+   
+ 
+}
+
+@media only screen and (max-width: 800px){
+    .wrapperArrow{
+        flex-direction: column;
+    }
+}
