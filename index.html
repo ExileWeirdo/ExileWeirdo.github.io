@@ -25,6 +25,17 @@
       <input id="year" placeholder="YYYY" type="number" class="year">
       <span id="year_error"></span>
     </div>
+    <div class="mode">
+      <div class="daysOnly">
+        <span id="daysOnlyText">Days only</span><input type="checkbox" id="showDays">
+      </div> 
+      <div class="monthsOnly">
+        <span id="monthsOnlyText">Months only</span><input type="checkbox" id="showMonths">
+      </div> 
+      <div class="yearsOnly">
+        <span id="yearsOnlyText">Years only</span><input type="checkbox" id="showYears">
+      </div>
+    </div>
   </div>
   <div class="wrapperArrow">
     <button onclick="calculateAge()" class="arrowButton" id="calculator">

@@ -134,6 +134,21 @@ svg{
     cursor: pointer;
 }
 
+.mode{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#daysOnlyText, #monthsOnlyText, #yearsOnlyText{
+    margin-right: 5px;
+}
+
+.outcome span{
+    color: hsl(259, 100%, 65%);
+}
 
 
 @media only screen and (max-width: 1000px){
