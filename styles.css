@@ -41,12 +41,15 @@ body{
 .inputs{
     display:flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3%;
 }
 
 .outcome{
     display: flex;
     flex-direction: column;
-    font-size: clamp(1.6rem, 0.72rem + 4.4vw, 6rem);
+    font-size: clamp(1.9rem, 1.08rem + 4.1vw, 6rem);
     font-weight: 800;
     padding: 0.2em 0.2em;
     font-family: 'Poppins-ExtraBold';
@@ -68,8 +71,9 @@ body{
     width: 100%;
     max-width: 8rem;
     height: 100%;
+    height: 3rem;
     padding: 1rem;
-    font-size: clamp(0.4rem, 0.28rem + 0.6vw, 1rem);
+    font-size: clamp(0.7rem, 0.64rem + 0.3vw, 1rem);
     margin-top: 0.2rem;
     outline: none;
     border: 1px solid lightgray;
@@ -108,7 +112,7 @@ svg{
     display:flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 20px;
 }
 
 .wrapperArrow::before{
@@ -124,8 +128,8 @@ svg{
     position: relative;
     border: none;
     border-radius: 50px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 
 }
 
@@ -144,37 +148,76 @@ svg{
 
 #daysOnlyText, #monthsOnlyText, #yearsOnlyText{
     margin-right: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins-Regular';
 }
 
 .outcome span{
     color: hsl(259, 100%, 65%);
 }
 
+#day_error, #month_error, #year_error{
+    color: red;
+    position: relative;
+    top: 0px;
+}
+
+.error{
+    color: red;
+    font-size: 0.8rem;
+}
+
+
+
+@media only screen and (max-width: 1180px){
+    .wrapperArrow{
+        flex-direction: column;
+    }
+  
+}
+
 
 @media only screen and (max-width: 1000px){
-    .arrowButton, svg{
-        width: 50px;
-        height: 50px;
-    }
+
 
     .leftInput input, .middleInput input, .rightInput input{
         padding: 0.5em;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     .wrapperDates{
         margin: 0;
         padding: 1em;
-        width: 80%;
+        width: 65%;
+        border-radius: 25px 25px 500px 25px;
     }
+
+    .arrowButton{
+        width: 50px;
+        height: 50px;
+    }
+    svg{
+        width: 50px;
+        height: 50px;
+    }
+   
 
    
  
 }
 
 @media only screen and (max-width: 800px){
-    .wrapperArrow{
-        flex-direction: column;
+    .inputs{
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    .outcome{
+        align-items: flex-start;
+    }
+
+    .wrapperDates{
+        border-radius: 25px 25px 50px 25px;
     }
 }
