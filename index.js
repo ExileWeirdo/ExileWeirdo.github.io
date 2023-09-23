@@ -79,8 +79,25 @@ function calculateAge() {
         return;
     }
 
+    const currentMonth = new Date().getMonth() + 1;
+    const currentDay = new Date().getUTCDate();
+
+    if (year > currentYear){
+       yearError.textContent = "Harry you're a wizard!"
+        return;
+    }
+    else if (year === currentYear && month > currentMonth){
+        monthError.textContent = "Harry you're a wizard!"
+        return;
+    }
+    else if (year === currentYear && month === currentMonth && day > currentDay){
+        dayError.textContent = "Harry you're a wizard!"
+        return;
+    }
+
     if (!validateDate(day, month, year) || year < 1900 || year > currentYear){
-        const currentYear = new Date().getFullYear();
+        
+     
         if ((day === 31 && [4, 6, 9, 11].includes(month)) || (day > 28 && month === 2 && !isLeapYear(year)) || ((day === 30 || day === 31) && month === 2)){
             dayError.textContent = "Must be a valid date";
         }
@@ -88,9 +105,10 @@ function calculateAge() {
             if (day < 1 || day > 31){
                 dayError.textContent = "Must be a valid day!";
             }
-            if (month < 1 || month > 12){
+            if (month < 1 || month > 12) {
                 monthError.textContent = "Must be a valid month!";
             }   
+           
             if (year < 1900 || year > currentYear){
                 yearError.textContent = "Must be a valid year!";
             }        
